@@ -1,0 +1,29 @@
+var num = readLine().trim()
+// YOUR CODE GOES HERE
+function printGrade(fn, num) {
+  if (num >= 90) {
+    fn('A')
+  } else if (num >= 80) {
+    fn('B')
+  } else if (num >= 70) {
+    fn('C')
+  } else if (num >= 60) {
+    fn('D')
+  } else if (num >= 50) {
+    fn('E')
+  } else {
+    fn('F')
+  }
+}
+printGrade(console.log(), 59)
+
+function printGrade1(fn, num) {
+  if (num >= 90) return fn('A')
+  if (num >= 80) return fn('B')
+  if (num >= 70) return fn('C')
+  if (num >= 60) return fn('D')
+  if (num >= 50) return fn('E')
+  return fn('F')
+}
+
+printGrade1(console.log, 49) // Output: F
